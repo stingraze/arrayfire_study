@@ -21,11 +21,13 @@ int main(int argc, char *argv[])
 		//af::setDevice(device);
 		//af::info();
 
+		//Just sample to show stuff.
 		af::array a = af::range(10);  // [0,  9]
 		a = a + 1;                    // [1, 10]
 		af_print(a);
 
 
+		//This is where the actual saving / calculation starts.
 		std::ofstream myfile;
 		myfile.open("example2.txt");
 
@@ -44,7 +46,7 @@ int main(int argc, char *argv[])
 			printf("host_b = %f\n", host_b[a]);
 		}
 		myfile.close();
-		
+
 
 		delete[] host_b;
 
